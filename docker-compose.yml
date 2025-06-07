@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    container_name: myapp_web
+    volumes: [".:/app"]
+    ports: ["4567:4567"]
+    depends_on: [db]
+    environment:
+      DATABASE_URL: mysql2://root:password@db:3306/calendar_db
+    tty: true
+    stdin_open: true
+
+  db:
+    image: mysql:8.4
+    container_name: myapp_db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: calendar_db
+    volumes: ["db-data:/var/lib/mysql"]
+    ports: ["3306:3306"]
+
+volumes:
+  db-data:

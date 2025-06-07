@@ -1,0 +1,10 @@
+{
+    "name": "myapp",
+    "private": true,
+    "devDependencies": {
+      "eslint": "^9.25.0"
+    },
+    "scripts": {
+      "lint": "eslint . --ext .js"
+    }
+  }
