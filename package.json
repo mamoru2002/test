@@ -1,6 +1,7 @@
 {
     "name": "myapp",
     "private": true,
+    "type": "module",
     "devDependencies": {
       "eslint": "^9.25.0"
     },
