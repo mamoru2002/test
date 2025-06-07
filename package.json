@@ -4,7 +4,7 @@
     "devDependencies": {
       "eslint": "^9.25.0"
     },
-    "scripts": {
-      "lint": "eslint . --ext .js"
-    }
+      "scripts": {
+      "lint": "npx eslint . --ext .js"
+      }
   }
