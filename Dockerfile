@@ -16,4 +16,4 @@ COPY package.json .eslintrc.json ./
 RUN npm install
 
 COPY . .
-CMD ["ruby", "-run", "-e", "httpd", "--", "-p", "4567", "-b", "0.0.0.0"]
+CMD ["ruby", "app.rb"]
