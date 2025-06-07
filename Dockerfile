@@ -12,7 +12,7 @@ WORKDIR /app
 COPY Gemfile Gemfile.lock ./
 RUN gem update --system && gem install bundler && bundle install --jobs 4 --retry 3
 
-COPY package.json .eslintrc.json ./
+COPY package.json eslint.config.js ./
 RUN npm install
 
 COPY . .
